@@ -48,3 +48,34 @@ Os resultados são processados e exibidos no terminal (ou salvos em arquivo, dep
 Contribuições são bem-vindas! Por favor, abra um issue ou pull request para sugerir melhorias ou corrigir problemas.
 
 
+## Instruções para Configuração do Projeto IS_Project
+
+Este projeto inclui dois submódulos principais, Groma e JiuTian-LION, que contêm as implementações centrais. Para garantir o correto funcionamento e evitar o upload de ficheiros pesados, estes submódulos estão organizados como repositórios Git separados dentro do repositório principal.
+
+# Clonagem do Repositório
+
+Para clonar o projeto corretamente com todos os submódulos, utilize o seguinte comando:
+
+git clone --recurse-submodules https://github.com/gp-debora/IS_Project.git
+Se já clonou o repositório sem os submódulos, execute:
+
+git submodule update --init --recursive
+
+# Configuração do Ambiente
+
+Crie um ambiente virtual Python (recomendado):
+python -m venv venv
+source venv/bin/activate   # Linux/macOS
+venv\Scripts\activate      # Windows
+Instale as dependências do projeto:
+pip install -r requirements.txt
+
+# Configuração do VSCode
+
+No VSCode, a configuração já inclui as pastas Groma e JiuTian-LION/ram como caminhos adicionais para o Python, evitando erros de importação.
+
+# Executar
+
+Agora pode executar os scripts de cada módulo normalmente, com as dependências instaladas e submódulos carregados.
+
+
